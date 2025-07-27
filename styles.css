@@ -7,9 +7,39 @@
    flex-direction: column;
    gap: 10px;
 }
+
+@media screen and (min-width:576px){
+ .blog-card-wrappers{
+   flex-direction: row;
+   flex-wrap: wrap;
+   max-width: 720px;
+ }
+ .blog-card{
+   width: 50%;
+   display:flex;
+   /* flex-direction: column; */
+   width: calc((100% - 10px - 4px)/2);
+ }
+
+}
+
+
+@media screen and (min-width:992px){
+.blog-card-wrappers{
+   max-width: 960px;
+}
+.blog-card{
+   width:calc((100% - 20px - 6px)/3)
+}
+   
+}
 .blog-card{
 border:1px solid #ccc;
 border-radius:4px;
+}
+.blog-card:hover{
+   cursor:pointer;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 .blog-card-image>img{
    object-fit: cover;
